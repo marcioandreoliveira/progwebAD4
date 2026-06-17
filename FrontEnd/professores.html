@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Professores</title>
+</head>
+<body>
+    <header>
+        <div class="logo-titulo">
+            <img src="img/logo.png" alt="Instituto Federal Catarinense" class="logo">
+            <h1>Cadastro de Professores</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Gestão Acadêmica</a></li>
+                <li><a href="cursos.html">Cadastro de Cursos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+  <button id="addProfessores">Adicionar Professores</button>
+    <table id="professoresTable">
+      <thead>
+        <tr>
+          <th>Nome do Professor</th>
+          <th>E-mail</th>
+          <th>Sala</th>
+          <th>Curso Inscrito</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+     <tbody>
+      </tbody>
+    </table>
+</main>
+    <script src="professores.js"defer></script>   
+</body>
+
+<!-- Modal para Adicionar/Editar Professores -->
+<div id="professorModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Adicionar/Editar Professor</h2>
+    <form id="professorForm">
+      <input type="hidden" id="codigo" name="codigo" required>
+      <label for="nomeProfessor">Nome do Professor:</label>
+      <input type="text" id="nomeProfessor" name="nomeProfessor" required>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="sala">Sala:</label>
+      <input type="number" id="sala" name="sala" required>
+      <label for="cursoInscrito">Curso Inscrito:</label>
+      <input type="text" id="cursoInscrito" name="cursoInscrito" required>
+      <button type="submit">Salvar</button>
+    </form>
+  </div>  
+</div>
+</html>
